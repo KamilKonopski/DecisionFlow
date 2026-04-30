@@ -24,7 +24,6 @@ export default defineConfig([
       "@typescript-eslint/no-unused-vars": ["error"],
       "@typescript-eslint/consistent-type-imports": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "no-console": "warn",
     },
   },
 ]);
