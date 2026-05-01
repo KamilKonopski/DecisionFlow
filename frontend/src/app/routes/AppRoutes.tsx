@@ -5,6 +5,7 @@ import NotFound from "@/shared/ui/NotFound/NotFound";
 import Home from "@/pages/Home";
 import ProtectedRoute from "./ProtectedRoute";
 import RootRedirect from "./RootRedirect";
+import MainLayout from "@/shared/layout/MainLayout";
 
 const AppRoutes = () => {
   return (
@@ -13,14 +14,14 @@ const AppRoutes = () => {
         <Route path="/" element={<RootRedirect />} />
         <Route path="/auth" element={<Auth />} />
         <Route
-          path="/home"
           element={
             <ProtectedRoute>
-              <Home />
+              <MainLayout />
             </ProtectedRoute>
           }
-        />
-
+        >
+          <Route path="/home" element={<Home />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
