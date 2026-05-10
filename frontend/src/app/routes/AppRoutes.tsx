@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import ProtectedRoute from "./ProtectedRoute";
 import RootRedirect from "./RootRedirect";
 import MainLayout from "@/shared/layout/MainLayout";
+import AllDesisions from "@/pages/AllDesisions";
 
 const AppRoutes = () => {
   return (
@@ -20,7 +21,8 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         >
-          <Route path="/home" element={<Home />} />
+          <Route path="/dashboard" element={<Home />} />
+          <Route path="/all-decisions" element={<AllDesisions />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

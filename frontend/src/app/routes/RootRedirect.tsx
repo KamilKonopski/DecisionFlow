@@ -4,7 +4,7 @@ import { isAuthenticated } from "@/features/authentication/lib/auth";
 
 const RootRedirect = () => {
   if (isAuthenticated()) {
-    return <Navigate to="/home" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return <Navigate to="/auth?mode=login" replace />;
